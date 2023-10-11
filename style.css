@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.corpo{
+.corpo {
     background-image: linear-gradient(90deg, #a09b56b0 0%, #E8F467 20%, #abb33b 90%);
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-.containerPrincipal{
+.containerPrincipal {
     display: flex;
     width: 100%;
     height: 100vh;
@@ -23,7 +23,7 @@
 }
 
 
-.containerMesa{
+.containerMesa {
     display: flex;
     width: 98%;
     justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 
-#mesa{
+#mesa {
     display: flex;
     width: 240vh;
     height: 50vh;
@@ -40,7 +40,7 @@
     z-index: 1;
 }
 
-#teladecomputador{
+#teladecomputador {
     position: absolute;
     top: 32%;
     left: 50%;
@@ -50,7 +50,7 @@
     z-index: 2;
 }
 
-#lampada{
+#lampada {
     position: absolute;
     top: 35%;
     left: 72%;
@@ -60,8 +60,7 @@
     z-index: 2;
 }
 
-
-#janela{
+#janela {
     position: absolute;
     top: 30%;
     left: 10%;
@@ -70,23 +69,28 @@
     transform: translate(-50%, -50%);
 }
 
-.piso{
+.piso {
     border-top: 3px solid rgb(255, 230, 0);
     background-image: linear-gradient(190deg, #a07f13a2 0%, #dbd13e 30%, #bb9a2c 90%);
     position: absolute;
+    text-align: center;
     z-index: 0;
     width: 100%;
     height: 20vh;
 }
 
-.containerBotao{
+.piso > p {
+    color: #8a9406;
+}
+
+.containerBotao {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-#botao{
+#botao {
     position: absolute;
     top: 40%;
     left: 88%;
@@ -97,9 +101,8 @@
     z-index: 3;
 }
 
-
-.game{
-    background-image: linear-gradient(180deg, #87ceeb 0%, #87ceeb 90%, rgb(21, 235, 14) 100%);
+.game {
+    background-image: linear-gradient(180deg, #87ceeb 0%, #87ceeb 90%, #15eb0e 100%);
     position: absolute;
     top: 25%;
     left: 51.1%;
@@ -109,7 +112,7 @@
     z-index: 3;
 }
 
-.mario{
+.mario {
     position: absolute;
     width: 20px;
     bottom: 0;
@@ -117,7 +120,7 @@
     padding-left: 2px;
 }
 
-.banana{
+.banana {
     position: absolute;
     padding-bottom: 2px;
     bottom: 0;
@@ -125,58 +128,63 @@
     animation: banana-animation 2s infinite linear;
 }
 
-.jump{
+.jump {
     animation: jump 800ms ease-out;
 }
 
 @keyframes jump {
-    0%{
+    0% {
         bottom: 0;
     }
 
-    25%{
+    25% {
         bottom: 70px;
     }
 
-    35%{
+    35% {
         bottom: 90px;
     }
-    45%{
+
+    45% {
         bottom: 95px;
     }
-    50%{
+
+    50% {
         bottom: 100px;
     }
-    65%{
+
+    65% {
         bottom: 70px;
     }
-    75%{
+
+    75% {
         bottom: 50px;
     }
 
-    85%{
-        bottom:30px;
+    85% {
+        bottom: 30px;
     }
-    95%{
+
+    95% {
         bottom: 15px;
     }
 
-    100%{
+    100% {
         bottom: 0px;
     }
 }
 
 @keyframes banana-animation {
-    from{
+    from {
         right: 0px;
     }
 
-    to{
+    to {
         right: 98%;
     }
 }
 
-.localEscuro{
+.localEscuro {
     background-color: rgb(37, 37, 6);
     opacity: 0.2;
 }

@@ -7,19 +7,18 @@ function trocarImagem(elementImg, srcAtribute) {
     imagem.setAttribute('src', srcAtribute)
 }
 
-function addClasseElemento(element, classeCSS) {
-    const elemento = document.getElementsByTagName(element)
+function addClasseElemento(elemento, classeCSS) {
+    const componentes = document.getElementsByTagName(elemento)
 
-    for (let i = 0; i < elemento.length; i++) {
-        elemento[i].classList.add(classeCSS)
+    for (let i = 0; i < componentes.length; i++) {
+        componentes[i].classList.add(classeCSS)
     }
 }
 
 function removerClasseElemento(element, classeCSS) {
-    const elemento = document.getElementsByTagName(element)
-    for (let i = 0; i < elemento.length; i++) {
-        elemento[i].classList.remove(classeCSS)
-
+    const componentes = document.getElementsByTagName(element)
+    for (let i = 0; i < componentes.length; i++) {
+        componentes[i].classList.remove(classeCSS)
     }
 }
 
@@ -28,22 +27,27 @@ botao.addEventListener('click', () => {
     const jaClicado = botao.getAttribute('data-jaClicado')
 
     if (jaClicado === "null" || jaClicado === "false") {
+
         botao.setAttribute('data-jaClicado', "true")
         trocarImagem("lampada", "./img/lampadaapagada.png")
         trocarImagem("botao", "./img/botaodesligar.png")
         removerClasseElemento("body", "corpo")
         addClasseElemento("body", "localEscuro")
+
     } else {
+
         botao.setAttribute('data-jaClicado', "false")
         trocarImagem("lampada", "./img/lampadaligada.png")
         trocarImagem("botao", "./img/botaoligar.png")
         removerClasseElemento("body", "localEscuro")
         addClasseElemento("body", "corpo")
+
     }
 
 })
 
 const jump = () => {
+
     mario.classList.add('jump');
 
     setTimeout(() => {
@@ -64,7 +68,6 @@ const loop = setInterval(() => {
         banana.style.left = `${bananaPosition}px`;
         mario.style.animation = 'none';
         mario.style.left = `${marioPosition}px`;
-
         mario.src = ''
 
         clearInterval(loop);
@@ -72,4 +75,5 @@ const loop = setInterval(() => {
 
 }, 10);
 
-document.getElementsByClassName("game")[0].addEventListener('click', jump);
+document.addEventListener('keypress', jump);
+document.getElementsByTagName("body")[0].addEventListener('click', jump);
