@@ -87,13 +87,14 @@
 }
 
 #botao{
-    display: flex;
-    cursor: pointer;
     position: absolute;
     top: 40%;
     left: 88%;
-    width: 22vh;
-    height: 15vh;
+    transform: translate(-50%, -50%);
+    width: 30vh;
+    height: 20vh;
+    cursor: pointer;
+    z-index: 3;
 }
 
 
