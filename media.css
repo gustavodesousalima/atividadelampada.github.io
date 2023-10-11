@@ -1,4 +1,4 @@
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 998px) {
     #teladecomputador{
         position: absolute;
         top: 32%;
@@ -18,5 +18,9 @@
         height: 29.9vh;
         transform: translate(-50%, -50%);
         z-index: 3;
+    }
+
+    p{
+        display: none;
     }
 }
