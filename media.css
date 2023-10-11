@@ -1,0 +1,22 @@
+@media screen and (max-width: 880px) {
+    #teladecomputador{
+        position: absolute;
+        top: 32%;
+        left: 48%;
+        width: 110vh;
+        height: 55vh;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .game{
+        background-image: linear-gradient(180deg, #87ceeb 0%, #87ceeb 90%, rgb(21, 235, 14) 100%);
+        position: absolute;
+        top: 25%;
+        left: 49.1%;
+        width: 60.9vh;
+        height: 29.9vh;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+}
